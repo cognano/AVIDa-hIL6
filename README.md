@@ -1,6 +1,6 @@
-# AVIDa-hIL6: A Large-Scale VHH Dataset Produced by an Immunized Alpaca for Predicting Antigen-Antibody Interactions
+# AVIDa-hIL6: A Large-Scale VHH Dataset Produced from an Immunized Alpaca for Predicting Antigen-Antibody Interactions
 
-This repository contains the supplementary material accompanying the paper, AVIDa-hIL6: A Large-Scale VHH Dataset Produced by an Immunized Alpaca for Predicting Antigen-Antibody Interactions.
+This repository contains the supplementary material accompanying the paper, AVIDa-hIL6: A Large-Scale VHH Dataset Produced from an Immunized Alpaca for Predicting Antigen-Antibody Interactions.
 The dataset is available at https://avida-hil6.cognanous.com under a CC BY-NC-SA 4.0 license.
 
 <img src="./docs/images/data_generation_overview.png" alt="dataset-generation-overview">
@@ -55,7 +55,7 @@ A labeled CSV file has four columns as shown below.
 | Ag_label     | Type of IL-6 protein                                                              |
 | label        | Binary label represented by 1 for the binding pair and 0 for the non-binding pair |
 
-A labeled dataset contains 573,891 data samples, including 20,980 binding pairs and 552,911 non-binding pairs.
+A labeled dataset contains 573,891 data samples, comprising 20,980 binding pairs and 552,911 non-binding pairs.
 The following figure shows the number of data samples for each antigen type.
 
 <img src="./docs/images/data_samples.png" alt="data-samples" width="550">
