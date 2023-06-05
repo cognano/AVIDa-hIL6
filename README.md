@@ -1,7 +1,7 @@
 # AVIDa-hIL6: A Large-Scale VHH Dataset Produced from an Immunized Alpaca for Predicting Antigen-Antibody Interactions
 
 This repository contains the supplementary material accompanying the paper, AVIDa-hIL6: A Large-Scale VHH Dataset Produced from an Immunized Alpaca for Predicting Antigen-Antibody Interactions.
-The dataset is available at https://avida-hil6.cognanous.com under a CC BY-NC-SA 4.0 license.
+The dataset is available at https://avida-hil6.cognanous.com under a CC BY-NC 4.0 license.
 
 <img src="./docs/images/data_generation_overview.png" alt="dataset-generation-overview">
 
