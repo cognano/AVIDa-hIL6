@@ -110,7 +110,7 @@ The CSV file will be converted to npz files by executing the following commands.
     python benchmarks/encodings/skipgram.py --data-path "training_set.csv" --file-name "train_skipgram"
     ```
 
-3. One-hot encoding for MLP
+3. One-hot encoding for MLP and LR
 
     ```bash
     python benchmarks/encodings/onehot.py --data-path "training_set.csv" --file-name "train_onehot"
@@ -125,6 +125,8 @@ The CSV file will be converted to npz files by executing the following commands.
 | --file-name | No       | "il6_aai_dataset"                              | Name of output npz file                     |
 
 ### Model Training and Evaluation
+
+#### AbAgIntPre, PIPR and MLP
 
 The model is trained using `train-data` and evaluated using `test-data` by executing the following commands.
 Make sure to use the appropriate encoding npz file according to `model-name`.
@@ -158,6 +160,24 @@ Test: loss 0.0705, accuracy 0.9891, AUROC 0.9468, AUPRC 0.8286, precision 0.9452
 | --amp         | No       | False     | Use Automatic Mixed Precision to save memory usage        |
 | --run-id      | No       |           | Run ID used for the directory name for saving the results |
 | --model-path  | No       |           | Model path used for retraining                            |
+
+#### LR
+
+The model is trained using `train-data` and evaluated using `test-data` by executing the following commands.
+Make sure to use the one-hot encoding npz file for LR.
+
+```bash
+python benchmarks/train_lr.py --train-data "train_onehot.npz" --test-data "test_onehot.npz"
+```
+
+**Arguments:**
+
+| Argument      | Required | Default   | Description                                               |
+|---------------|----------|-----------|-----------------------------------------------------------|
+| --train-data  | Yes      |           | Path of training data                                     |
+| --test-data   | Yes      |           | Path of test data                                         |
+| --save-dir    | No       | "./saved" | Save directory path                                       |
+| --run-id      | No       |           | Run ID used for the directory name for saving the results |
 
 ## Citation
 
