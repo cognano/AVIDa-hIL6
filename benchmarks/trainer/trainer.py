@@ -248,7 +248,7 @@ class Trainer:
                 valid_loss += loss.item()
                 pred = torch.round(output_sig)
                 preds.extend(pred.tolist())
-        valid_loss = valid_loss / len(self.test_loader)
+        valid_loss = valid_loss / len(self.valid_loader)
         valid_auroc = roc_auc_score(targets, outputs)
         valid_accuracy = accuracy_score(targets, preds)
         valid_precision = precision_score(targets, preds)
