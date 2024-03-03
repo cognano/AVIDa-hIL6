@@ -185,7 +185,7 @@ If you use AVIDa-hIL6 in your research, please use the following citation:
 
 ```bibtex
 @inproceedings{tsuruta2023avida,
-  title={{AVID}a-h{IL}6: A Large-Scale VHH Dataset Produced from an Immunized Alpaca for\\Predicting Antigen-Antibody Interactions},
+  title={{AVID}a-h{IL}6: A Large-Scale VHH Dataset Produced from an Immunized Alpaca for Predicting Antigen-Antibody Interactions},
   author={Hirofumi Tsuruta and Hiroyuki Yamazaki and Ryota Maeda and Ryotaro Tamura and Jennifer N. Wei and Zelda Mariet and Poomarin Phloyphisut and Hidetoshi Shimokawa and Joseph R. Ledsam and Lucy Colwell and Akihiro Imura},
   booktitle={Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},
   year={2023},
