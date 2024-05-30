@@ -1,6 +1,6 @@
 # AVIDa-hIL6: A Large-Scale VHH Dataset Produced from an Immunized Alpaca for Predicting Antigen-Antibody Interactions
 
-This repository contains the supplementary material accompanying the paper, AVIDa-hIL6: A Large-Scale VHH Dataset Produced from an Immunized Alpaca for Predicting Antigen-Antibody Interactions.
+This repository contains the supplementary material accompanying the paper, [AVIDa-hIL6: A Large-Scale VHH Dataset Produced from an Immunized Alpaca for Predicting Antigen-Antibody Interactions](https://arxiv.org/abs/2306.03329).
 The dataset is available at https://avida-hil6.cognanous.com under a CC BY-NC 4.0 license.
 
 <img src="./docs/images/data_generation_overview.png" alt="dataset-generation-overview">
@@ -185,9 +185,9 @@ If you use AVIDa-hIL6 in your research, please use the following citation:
 
 ```bibtex
 @inproceedings{tsuruta2023avida,
-  title={{AVID}a-h{IL}6: A Large-Scale VHH Dataset Produced from an Immunized Alpaca for Predicting Antigen-Antibody Interactions},
+  title={{AVID}a-h{IL}6: A Large-Scale {VHH} Dataset Produced from an Immunized Alpaca for Predicting Antigen-Antibody Interactions},
   author={Hirofumi Tsuruta and Hiroyuki Yamazaki and Ryota Maeda and Ryotaro Tamura and Jennifer N. Wei and Zelda Mariet and Poomarin Phloyphisut and Hidetoshi Shimokawa and Joseph R. Ledsam and Lucy Colwell and Akihiro Imura},
-  booktitle={Advances in Neural Information Processing Systems 36 (NeurIPS 2023)},
+  booktitle={Advances in Neural Information Processing Systems 36},
   year={2023},
 }
 ```
