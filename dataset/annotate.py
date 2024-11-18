@@ -8,7 +8,7 @@ import sys
 import numpy as np
 import pandas as pd
 import scipy.stats as st
-from constants import AG_SEQUENCES, INDEX_COLUMN_NAME, INTERACTION
+from constants import AG_SEQUENCES, INDEX_COLUMN_NAME, INTERACTION, SUBJECT_INFO
 
 
 def load_library_table(filepath):
@@ -158,8 +158,6 @@ def main():
     parser.add_argument("--target-prefix", type=str, default="IL-6")
     args = parser.parse_args()
 
-    ag_seq = AG_SEQUENCES.get(args.antigen_label, "UNKNWON")
-
     libtable_path = os.path.abspath(args.libtable_file)
     df_tab = load_library_table(libtable_path)
     target_lib_groups = list_library_groups(
@@ -173,7 +171,9 @@ def main():
 
     # Adjust output
     df_out = df_result.loc[:, ["sequence", "label"]].rename(columns={"sequence": "VHH_sequence"})
-    df_out = df_out.assign(Ag_label=args.antigen_label, Ag_sequence=ag_seq)
+    df_out = df_out.assign(Ag_label=args.antigen_label)
+    df_out = df_out.assign(subject_species=SUBJECT_INFO["species"], subject_name=SUBJECT_INFO["name"], subject_sex=SUBJECT_INFO["sex"])
+
     replace_dict = {
         INTERACTION.BINDER: "1",
         INTERACTION.NON_BINDER: "0",
