@@ -28,10 +28,14 @@ for group in $mutant_groups; do
 done
 
 # Annotation
-echo "VHH_sequence,label,Ag_label,Ag_sequence" >> $OUT_DIR/il6_aai_dataset.csv
+echo "VHH_sequence,label,Ag_label,subject_species,subject_name,subject_sex" >> $OUT_DIR/il6_aai_dataset.csv
 # - Wild Types
 $SCRIPT_DIR/annotate.py $OUT_DIR/libtable_IL-6_WTs.tsv IL-6_WTs >> $OUT_DIR/il6_aai_dataset.csv
 # - Mutants
 for group in $mutant_groups; do
 	$SCRIPT_DIR/annotate.py $OUT_DIR/libtable_$group.tsv $group >> $OUT_DIR/il6_aai_dataset.csv
 done
+
+# Antigen sequences
+echo "Ag_label,Ag_sequence" > $OUT_DIR/antigen_sequences.csv
+python -c "from constants import AG_SEQUENCES; [print(f'{k},{v}') for k, v in AG_SEQUENCES.items()]" >> $OUT_DIR/antigen_sequences.csv
